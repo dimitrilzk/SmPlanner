@@ -1,0 +1,23 @@
+# .NET
+bin/
+obj/
+*.user
+.vs/
+*.suo
+
+# Angular / Node
+node_modules/
+dist/
+.angular/
+npm-debug.log*
+
+# SQLite local data (non va committato, è il db personale dell'utente)
+*.db
+*.db-shm
+*.db-wal
+
+# Editor / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
