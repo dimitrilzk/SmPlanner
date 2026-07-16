@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
-using SmPlanner.Api.Data;
+using SmPlanner.Infrastructure;
+using SmPlanner.Infrastructure.Persistence;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -9,14 +10,7 @@ builder.Services.AddControllers();
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddOpenApi();
 
-var appDataFolder = Path.Combine(
-    Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData),
-    "SmPlanner");
-Directory.CreateDirectory(appDataFolder);
-var dbPath = Path.Combine(appDataFolder, "smplanner.db");
-
-builder.Services.AddDbContext<AppDbContext>(options =>
-    options.UseSqlite($"Data Source={dbPath}"));
+builder.Services.AddInfrastructure();
 
 var app = builder.Build();
 

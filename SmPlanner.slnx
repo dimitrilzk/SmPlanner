@@ -1,5 +1,8 @@
 <Solution>
   <Folder Name="/src/">
     <Project Path="src/SmPlanner.Api/SmPlanner.Api.csproj" />
+    <Project Path="src/SmPlanner.Application/SmPlanner.Application.csproj" />
+    <Project Path="src/SmPlanner.Domain/SmPlanner.Domain.csproj" />
+    <Project Path="src/SmPlanner.Infrastructure/SmPlanner.Infrastructure.csproj" />
   </Folder>
 </Solution>
