@@ -37,4 +37,10 @@ app.UseAuthorization();
 
 app.MapControllers();
 
+// In produzione l'app Angular compilata viene servita da qui (wwwroot),
+// così backend e frontend girano come un unico processo su un'unica porta.
+app.UseDefaultFiles();
+app.UseStaticFiles();
+app.MapFallbackToFile("index.html");
+
 app.Run();
